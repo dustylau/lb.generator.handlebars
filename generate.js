@@ -1,10 +1,6 @@
 const fs = require('fs');
 const Handlebars = require("handlebars");
-const Helpers = require("./lib/Helpers");
-const HandlebarsHelpers = require('./lib/HandlebarsHelpers');
-const { TemplateSettings } = require('./lib/TemplateSettings');
-const Template = require('./lib/Template');
-const { TemplateLoader } = require("./lib/TemplateLoader");
+const Generator = require('lb.generator.handlebars');
 
 // This is a sample model object
 const model = {
@@ -78,7 +74,7 @@ Template.prepareExportPath = function(settings, fileName, item) {
 
 // Create a Template Loader and pass it the directory containing the templates.
 // The loader will automatically load all template files ending in ".hbs" and their corresponding settings ".hbs.settings.json"
-var loader = new TemplateLoader('./sample-templates');
+var loader = new Generator.TemplateLoader('./sample-templates');
 
 // Load the templates with a callback containing the list of loaded templates
 loader.load(function (templates) {
