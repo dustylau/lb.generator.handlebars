@@ -1,0 +1,35 @@
+{
+    "Description": "Test Model",
+    "Items": [
+        { 
+            "Name": "ItemA", 
+            "Description": "Item - A", 
+            "Options": [ 
+                { "Id": "A", "Description": "Option A" },
+                { "Id": "B", "Description": "Option B" }
+            ] 
+        },
+        { 
+            "Name": "ItemB", 
+            "Description": "Item - B", 
+            "Options": [ 
+                { "Id": "C", "Description": "Option C" },
+                { "Id": "D", "Description": "Option D" }
+            ] 
+        }
+    ],
+    "List": [
+        {
+            "Id": "ListItem1", 
+            "Description": "List Item - 1"
+        },
+        {
+            "Id": "ListItem2", 
+            "Description": "List Item - 2"
+        },
+        {
+            "Id": "ListItem3", 
+            "Description": "List Item - 3"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+This sample template is generated once with the supplied model.
+
+You have access to the entire model:
+  Description: {{Description}}
+
+  Items:
+  {{#each Items}}
+    Item Name: {{Name}}
+      Description: {{Description}}
+      Options:
+        {{#each Options}}
+          Id: {{Id}}  Description: {{Description}}
+        {{/each}}
+  {{/each}}
+
+  List:
+  {{#each List}}
+    Id: {{Id}}  Description: {{Description}}
+  {{/each}}

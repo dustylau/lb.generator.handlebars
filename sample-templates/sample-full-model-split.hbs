@@ -1,0 +1,27 @@
+This sample template is generated once with the supplied model.
+The files will be split using the split markers.
+The file name will be pulled from the name tag.
+
+See the (.bhs.settings.json) for the details.
+
+//[FullModel-Split-Header.txt]
+//##SPLIT##
+You have access to the entire model:
+  Description: {{Description}}
+//[FullModel-Split-Model.txt]
+//##SPLIT##
+  {{#each Items}}
+    Item Name: {{Name}}
+      Description: {{Description}}
+      Options:
+        {{#each Options}}
+          Id: {{Id}}  Description: {{Description}}
+        {{/each}}
+//[FullModel-Split-Item-{{Name}}.txt]
+//##SPLIT##
+  {{/each}}
+  {{#each List}}
+    Id: {{Id}}  Description: {{Description}}
+//[FullModel-Split-List-{{Id}}.txt]
+//##SPLIT##
+  {{/each}}

@@ -1,0 +1,12 @@
+This sample template is generated for each item in model.Items.
+
+You have access to the entire model:
+  Model Description: {{model.Description}}
+
+You have access to the current scoped item in the Items array:
+  Item Name: {{item.Name}}
+    Description: {{item.Description}}
+    Options:
+      {{#each item.Options}}
+        Id: {{Id}}  Description: {{Description}}
+      {{/each}}
