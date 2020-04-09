@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/dustylau/lb.generator.handlebars/issues"
   },
-  "homepage": "https://github.com/dustylau/lb.generator.handlebars#readme"
+  "homepage": "https://github.com/dustylau/lb.generator.handlebars#readme",
+  "dependencies": {
+    "handlebars": "^4.7.6"
+  }
 }
