@@ -1,0 +1,24 @@
+{
+  "name": "lb.generator.handlebars",
+  "version": "1.0.0",
+  "description": "Template code generator based on Handlebars",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustylau/lb.generator.handlebars.git"
+  },
+  "keywords": [
+    "LetterB",
+    "code-generator",
+    "Handlebars"
+  ],
+  "author": "Dusty Lau (Letter B LLC)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dustylau/lb.generator.handlebars/issues"
+  },
+  "homepage": "https://github.com/dustylau/lb.generator.handlebars#readme"
+}
