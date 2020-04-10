@@ -2,6 +2,6 @@
     "Target": "List",
     "TargetItem": "listItem",
     "TargetItemNameProperty": "Id",
-    "ExportPath": ".\\Generated\\List\\{{listItem.Id}}.txt",
+    "ExportPath": ".\\Generated\\List\\\\{{listItem.Id}}.txt",
     "AppendToExisting": false
 }
