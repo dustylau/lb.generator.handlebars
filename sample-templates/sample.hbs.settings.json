@@ -1,6 +1,6 @@
 {
     "Target": "Items",
     "TargetItem": "item",
-    "ExportPath": ".\\Generated\\Items\\{item.Name}.txt",
+    "ExportPath": ".\\Generated\\Items\\{{item.Name}}.txt",
     "AppendToExisting": false
 }
