@@ -15,12 +15,13 @@ node generate.js
 ```
 
 ## Usage
+___
 
 ### 1. Include the library
 ```javascript
 const Generator = require('lb.generator.handlebars');
 ```
-
+___
 
 ### 2. Load or define a model
 ```javascript
@@ -52,6 +53,8 @@ const model = {
     ]
 };
 ```
+___
+
 
 ### 3. Define a template
 
@@ -71,6 +74,7 @@ You have access to the current scoped item in the Items array:
         Id: {{Id}}  Description: {{Description}}
       {{/each}}
 ```
+___
 
 ### 4. Define the template settings
 
@@ -80,10 +84,14 @@ Create a template settings file: ./sample-templates/sample.hbs.settings.json
 {
     "Target": "Items",
     "TargetItem": "item",
-    "ExportPath": ".\\Generated\\Items\\{item.Name}.txt",
+    "ExportPath": ".\\Generated\\Items\\\\{{item.Name}}.txt",
     "AppendToExisting": false
 }
 ```
+
+**Note:** _When using backslashes in a path, you must escape the backslashes an additional time if it precedes a Handldebars expression_
+___
+
 
 ### 5. Create a Template Loader
 
@@ -93,6 +101,7 @@ The loader will automatically load all template files ending in ".hbs" and their
 ```javascript
 var loader = new Generator.TemplateLoader('./sample-templates');
 ```
+___
 
 ### 6. Load and generate the templates
 
