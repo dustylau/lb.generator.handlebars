@@ -54,21 +54,35 @@ const model = {
 // The exported file path is prepared for each file during the generation process.
 //   The following code displays the default implementation but can be overriden by replacing the static function.
 /*
-Template.prepareExportPath = function(settings, fileName, item) {
+Template.prepareExportPath = function(settings, fileName, model) {
     const itemModelProperty = settings.targetItem || 'item';
     const targetItemNameProperty = settings.targetItemNameProperty || 'Name';
     const nameReplacement = `{${itemModelProperty}.${targetItemNameProperty}}`;
 
     var exportPath = settings.exportPath;
 
-    if (fileName && !Helpers.isEmpty(fileName))
-        exportPath = exportPath.replace("{FileName}", fileName);
+    if (settings.prepareExportPathUsingReplace) {
+        if (fileName && !Helpers.isEmpty(fileName))
+            exportPath = exportPath.replace("{FileName}", fileName);
 
-    if (item && item[targetItemNameProperty] && !Helpers.isEmpty(item[targetItemNameProperty]))
-        exportPath = exportPath.replace(nameReplacement, item[targetItemNameProperty]);
+        if (model && model[targetItemNameProperty] && !Helpers.isEmpty(model[targetItemNameProperty]))
+            exportPath = exportPath.replace(nameReplacement, model[targetItemNameProperty]);
+    }
+
+    if (settings.prepareExportPathUsingTemplate) {
+        if (!model || model === null)
+            model = {};
+
+        var exportPathTemplate = Handlebars.compile(exportPath);
+
+        if (fileName && !Helpers.isEmpty(fileName))
+            model.FileName = fileName;
+        
+        exportPath = exportPathTemplate(model);
+    }
 
     return exportPath;
-};
+}
 */
 
 
