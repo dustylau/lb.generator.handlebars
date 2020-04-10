@@ -5,10 +5,14 @@ The library is easily installed via npm and provides a set of tools to generate 
 
 ## Installation
 
-```javascript
+```
 npm install --save lb.generator.handlebars
 ```
 
+### Test
+```
+node generate.js
+```
 
 ## Usage
 
@@ -90,7 +94,7 @@ The loader will automatically load all template files ending in ".hbs" and their
 var loader = new Generator.TemplateLoader('./sample-templates');
 ```
 
-### 5. Load and generate the templates
+### 6. Load and generate the templates
 
   1. Call the `loader.load()` function and pass a callback that recieves an array of loaded templates.
   1. Iterate the loaded template array and call `template.generate()` for each template passing in your model.
