@@ -46,6 +46,8 @@ const model = {
 // By default, the templates will be generated with the following default global static values:
 // Generator.TemplateSettings.DefaultTarget = "Model";
 // Generator.TemplateSettings.DefaultTargetItem = "item";
+// Generator.TemplateSettings.DefaultTargetProperty = "target";
+// Generator.TemplateSettings.DefaultModelProperty = "model";
 // Generator.TemplateSettings.DefaultTargetItemNameProperty = "Name";
 
 // The TemplateSettings.Target value will be loaded from the template settings file (".hbs.settings.json")
