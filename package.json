@@ -1,6 +1,6 @@
 {
   "name": "lb.generator.handlebars",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Template code generator based on Handlebars",
   "main": "lb.generator.handlebars.js",
   "scripts": {
