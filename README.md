@@ -110,6 +110,23 @@ ___
   1. Call `template.write()` on a generated template to write the generated template to its defined file.
 
 ```javascript
+// Load the templates
+loader.load();
+
+// Generate the loaded templates.
+loader.generate(model, (loader) => { console.log("Templates Generated."); });
+```
+
+Or
+
+```javascript
+// Load and generate
+loader.loadAndGenerate(model, (loader) => { console.log('Templates loaded and generated.'); });
+```
+
+Or
+
+```javascript
 // Load the templates with a callback containing the list of loaded templates
 loader.load(function (templates) {
     // Interate the templates and generate each with the supplied model

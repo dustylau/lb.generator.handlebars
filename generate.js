@@ -92,6 +92,16 @@ Template.prepareExportPath = function(settings, fileName, model) {
 // The loader will automatically load all template files ending in ".hbs" and their corresponding settings ".hbs.settings.json"
 var loader = new Generator.TemplateLoader('./sample-templates');
 
+// Load the templates
+loader.load();
+
+// Generate the loaded templates.
+loader.generate(model, (loader) => { console.log("Templates Generated."); });
+
+// Load and generate
+//loader.loadAndGenerate(model, (loader) => { console.log('Templates loaded and generated.'); });
+
+/*
 // Load the templates with a callback containing the list of loaded templates
 loader.load(function (templates) {
     // Interate the templates and generate each with the supplied model
@@ -103,3 +113,4 @@ loader.load(function (templates) {
         template.write();
     }
 });
+*/
